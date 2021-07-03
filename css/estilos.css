@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    --colorblack:#333333;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+/* MAIN HEADER */
+.submain__header{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    width:100%;
+    background-color: var(--colorblack);
+    padding:10px 0;
+    position:fixed;
+    top:0;
+    z-index: 1;
+}
+.header__navbar__menu{
+    display: flex;    
+    align-items: center;
+}
+.navbar__menu__links{
+    list-style: none;
+}
+.navbar__menu__link{
+    text-decoration: none;
+    padding:0 20px;
+}
+.navbar__menu__link:hover{
+    text-shadow: 0 0 7px #fff, 
+   0 0 1px #fff, 
+   0 0 1px #fff, 
+   0 0 1px #808080,
+    0 0 1px #808080, 
+    0 0 1px #808080, 
+    0 0 1px #808080, 
+    0 0 1px #808080;
+    transition: 640ms;
+    cursor:pointer;
+}
+.main__header__heading{
+    color:#fff;
+}
+.main__header__heading:hover{
+   text-shadow: 0 0 7px #fff, 
+   0 0 1px #fff, 
+   0 0 1px #fff, 
+   0 0 1px #808080,
+    0 0 1px #808080, 
+    0 0 1px #808080, 
+    0 0 1px #808080, 
+    0 0 1px #808080;
+    transition: 640ms;
+    cursor:pointer;
+}
+
+
+.navbar__menu__link{
+   font-family: 'Open Sans', sans-serif;
+   color:#fff;  
+}
+
+/* MAIN PAGE */
+
+.page__banner__img{
+  width:100%; 
+  height:645px;
+  background-image: url("../img/banner.jpg");
+  background-size: cover;
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  position:relative;  
+}
+.panner__banner__heading{
+    position:absolute;
+    top:50%;
+    left:20%;
+    transform: translate(-50%,-50%);
+}
+.panner__banner__heading h1{
+    font-size:35px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.panner__banner__heading h3{
+    font-size:18px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+.panner__banner__heading a{
+    display:inline-block;
+    padding:5px 10px;
+    border:1px solid black;
+    text-decoration: none;
+    color:black;
+}
+.panner__banner__heading a:hover{
+   background-color: rgba(255, 255, 255, 0.301);
+   transition: 640ms;
+}
+
+/*WELCOME CLUB*/
+.welcome__club{
+    padding:60px;
+}
+.welcome__club__heading h2{
+    text-align: center;
+}
+.welcome__club__heading p{
+    text-align: center;
+    margin-bottom: 40px;
+}
+.welcome__club__heading h3{
+    text-align: center;
+     margin-bottom: 20px;
+}
+.welcome__club__images{
+    display:flex;
+    justify-content: space-between;
+    padding: 0 80px;    
+}
+.welcome__club__image{
+    width:32%;
+}
+.welcome__club__image p{
+    text-align: center;
+    font-weight: bold;    
+}
+.welcome__club__image img{
+    height:500px;
+    width:100%;
+    box-shadow: 2px 2px 2px #808080;
+}
+.welcome__club__image img:hover{
+    height:500px;
+    width:100%;
+     box-shadow: 0 0 7px #fff, 
+     0 0 4px #fff,
+     0 0 5px #fff, 
+     0 0 6px var(--colorblack),
+    0 0 7px var(--colorblack), 
+    0 0 8px var(--colorblack), 
+    0 0 9px var(--colorblack), 
+    0 0 29px var(--colorblack);
+    transition: 640ms;
+    transform: scale(0.9);
+}
+
+/* SUBMAIN PETS */
+.main__pets{
+    background-color: var(--colorblack);
+    padding:20px;
+}
+.submain__pets{
+    display:flex;
+    justify-content: space-between;
+}
+.submain__pet{
+    width:24%;
+    padding-top: 15px;
+}
+.main__pets__heading{
+    text-align: center;
+    padding:20px 0;
+    line-height: 40px;
+    font-size: 20px;
+    color:white;
+}
+.submain__pet:first-child > .submain__pet__image{
+    margin:0 auto 20px;
+    max-width:200px;
+    height:200px;
+    background-image: url("../img/mascota\ \(3\).jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    border-radius: 50%;
+}
+.submain__pet:first-child > .submain__pet__image:hover{
+    transform: rotate(-30deg);
+    transition:ease 640ms;
+    cursor: pointer;
+    box-shadow: 0 0 7px #fff, 0 0 3px #fff, 0 0 4px #fff, 0 0 5px #808080,
+    0 0 6px #808080, 0 0 7px #808080, 0 0 8px #808080, 0 0 29px #808080;
+}
+.submain__pet:last-child > .submain__pet__image{
+    margin:0 auto 20px;
+    max-width:200px;
+    height:200px;
+    background-image: url("../img/mascota\ \(4\).jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    border-radius: 50%;
+}
+.submain__pet:last-child > .submain__pet__image:hover{
+    transform: rotate(-30deg);
+    transition:ease 640ms;
+    cursor: pointer;
+    box-shadow: 0 0 7px #fff, 0 0 3px #fff, 0 0 4px #fff, 0 0 5px #808080,
+    0 0 6px #808080, 0 0 7px #808080, 0 0 8px #808080, 0 0 29px #808080;
+}
+.submain__pet:nth-child(2) > .submain__pet__image{
+    margin:0 auto 20px;
+    max-width:200px;
+    height:200px;
+    background-image: url("../img/mascota\ \(5\).jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    border-radius: 50%;
+}
+.submain__pet:nth-child(2) > .submain__pet__image:hover{
+    transform: rotate(-30deg);
+    transition:ease 640ms;
+    cursor: pointer;
+    box-shadow: 0 0 7px #fff, 0 0 3px #fff, 0 0 4px #fff, 0 0 5px #808080,
+    0 0 6px #808080, 0 0 7px #808080, 0 0 8px #808080, 0 0 29px #808080;
+}
+.submain__pet:nth-child(3) > .submain__pet__image{
+    margin:0 auto 20px;
+    max-width:200px;
+    height:200px;
+    background-image: url("../img/mascota\ \(2\).jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    border-radius: 50%;
+}
+.submain__pet:nth-child(3) > .submain__pet__image:hover{
+    transform: rotate(-30deg);
+    transition:ease 640ms;
+    cursor: pointer;
+    box-shadow: 0 0 7px #fff, 0 0 3px #fff, 0 0 4px #fff, 0 0 5px #808080,
+    0 0 6px #808080, 0 0 7px #808080, 0 0 8px #808080, 0 0 29px #808080;
+}
+.mini__pet__heading{
+    text-align: center;
+    color:white;
+}
+
+/* MAIN FOOTER */
+.submain__footer{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+    padding:30px 100px;
+}
+.submain__footer__heading{
+    font-weight: 300;
+}
+.submain__footer__heading{
+    font-weight: 300;
+}
+.socialnetwork{
+    font-size:25px;
+    margin:0 20px;
+    color:var(--colorblack);
+}
+.socialnetwork:hover{
+    transition: 640ms;
+    transform: scale(0.9);
+    color:black;
+    cursor:pointer;
+}
+
+ /* MEDIA QUERIES */
+
+ @media screen and (max-width:1100px) {
+     .panner__banner__heading{  
+    left:30%;
+    transition:640ms;
+}
+.welcome__club__images{
+    padding: 0 20px;    
+}
+}
+
+@media screen and (max-width:850px){
+    .welcome__club__images{
+    flex-direction: column;
+    padding: 0;    
+}
+.welcome__club__image{
+    width:100%;
+}
+.welcome__club__image img{
+   display:block;
+    margin: 0 auto;
+    max-width:400px;
+}
+.welcome__club__image p{
+    margin-top: 10px;
+    margin-bottom: 20px;   
+}
+.submain__pets{
+   flex-direction: column;
+   align-items: center;
+}
+.submain__pet{
+    width:50%;
+}
+}
+@media screen and (max-width:768px){
+    .panner__banner__heading{  
+    left:40%;
+    transition:640ms;
+}
+}
+
+@media screen and (max-width:650px){
+.submain__footer{
+    flex-direction: column;   
+}
+.socialnetwork{    
+    margin:20px 20px 0;
+}
+}
+
+@media screen and (max-width:500px) {
+    .panner__banner__heading{  
+    left:50%;
+    transition:640ms;
+    width:100%;
+    text-align: center;
+}
+.submain__header{
+   flex-direction: column;
+}
+.navbar__menu__links{
+    padding:20px 0;
+}
+.main__page__banner{
+  margin-top: 100px;
+}
+.page__banner__img{
+  background-position: center center; 
+}
+.panner__banner__heading{  
+    top:50%;
+}
+}
