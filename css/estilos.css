@@ -1,348 +1,268 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
-*{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-    --colorblack:#333333;
-    font-family: 'Open Sans', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-
-/* MAIN HEADER */
-.submain__header{
-    display:flex;
-    justify-content: space-around;
-    align-items: center;
+:root {
+  --colornegro: #333333;
+  --colorblanco: #ffffff;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  padding:0.1px;
+}
+/*************************HEADER*************************/
+.header {
+  background-color: var(--colornegro);
+  position:fixed;
+  z-index: 9999;
+  width:100%;
+}
+.subheader {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__heading {
+  color: var(--colorblanco);
+}
+.header__heading i {
+  margin-right: 5px;
+}
+.navbar__menu {
+  display: flex;
+}
+.navlinks {
+  list-style: none;
+}
+.navlink {
+  text-decoration: none;
+  color: var(--colorblanco);
+  display: block;
+  padding: 16px 24px;
+}
+.navlinks:last-child .navlink {
+  padding-right: 0;
+}
+/**********************MEDIA QUERIES**********************/
+@media screen and (max-width: 768px) {
+.header {
+  position:relative;
+}
+  .subheader {
+    max-width: auto;
+    flex-direction: column;    
+  padding:  8px;
+}
+.navbar {
+    width: 100%;
+}
+.navbar__menu {
+    flex-direction: column;
+  }
+.navlinks{
+    text-align: center;
+}
+}
+/*********************MAIN BANNER*********************/
+.main__banner{
+    position:relative;
+}
+.banner__img{
+    max-width:100%;
     width:100%;
-    background-color: var(--colorblack);
-    padding:10px 0;
-    position:fixed;
-    top:0;
-    z-index: 1;
+    object-fit:cover;
+    object-position: center;
+    height:650px;
 }
-.header__navbar__menu{
-    display: flex;    
-    align-items: center;
-}
-.navbar__menu__links{
-    list-style: none;
-}
-.navbar__menu__link{
-    text-decoration: none;
-    padding:0 20px;
-}
-.navbar__menu__link:hover{
-    text-shadow: 0 0 7px #fff, 
-   0 0 1px #fff, 
-   0 0 1px #fff, 
-   0 0 1px #808080,
-    0 0 1px #808080, 
-    0 0 1px #808080, 
-    0 0 1px #808080, 
-    0 0 1px #808080;
-    transition: 640ms;
-    cursor:pointer;
-}
-.main__header__heading{
-    color:#fff;
-}
-.main__header__heading:hover{
-   text-shadow: 0 0 7px #fff, 
-   0 0 1px #fff, 
-   0 0 1px #fff, 
-   0 0 1px #808080,
-    0 0 1px #808080, 
-    0 0 1px #808080, 
-    0 0 1px #808080, 
-    0 0 1px #808080;
-    transition: 640ms;
-    cursor:pointer;
-}
-
-
-.navbar__menu__link{
-   font-family: 'Open Sans', sans-serif;
-   color:#fff;  
-}
-
-/* MAIN PAGE */
-
-.page__banner__img{
-  width:100%; 
-  height:645px;
-  background-image: url("../img/banner.jpg");
-  background-size: cover;
-  background-position: bottom left;
-  background-repeat: no-repeat;
-  position:relative;  
-}
-.panner__banner__heading{
+.banner__description{
     position:absolute;
-    top:50%;
-    left:20%;
-    transform: translate(-50%,-50%);
-}
-.panner__banner__heading h1{
+    top:40%;
+    left:5%;
+} 
+.banner__heading{
+    margin-bottom: 10px;
     font-size:35px;
-    font-weight: 700;
-    margin-bottom: 5px;
+    font-weight:700;
 }
-.panner__banner__heading h3{
+.banner__txt{
+    margin-bottom: 10px; 
     font-size:18px;
-    font-weight: 300;
+    font-weight:300;
+}
+.banner__btn{
+    text-decoration: none;
+    display:inline-block;
+    padding:8px 16px;
+    border:1px solid black;
+    color:var(--colornegro);
+    transition:640ms;
+}
+.banner__btn:hover{
+    background-color: rgba(255, 255, 255, 0.658);
+}
+/*********************MEDIA QUERIES*********************/
+@media screen and (max-width:768px){
+    .main__banner{
+    position:relative;
+}
+    .banner__img{
+    object-position: top;
+    height:350px;
+}
+.banner__description{
+    position:absolute;
+    top:25%;
+    bottom:27%;
+    left:20%;
+    right:20%;
+    margin:auto;
+    text-align: center;
+    padding:10px;
+} 
+}
+@media screen and (max-width:375px){
+.banner__description{
+    top:18%;
+    left:10%;
+    right:10%;
+} 
+}
+/*********************MAIN CLUB*********************/
+.main__club{
+    max-width:1000px;
+    margin:40px auto ;
+    padding:0 8px;
+}
+.submain__club{
+    margin-top: 20px;
     margin-bottom: 10px;
 }
-.panner__banner__heading a{
-    display:inline-block;
-    padding:5px 10px;
-    border:1px solid black;
-    text-decoration: none;
-    color:black;
+.club__heading{
+    text-align: center;
+    font-size:24px;
+    margin-bottom: 5px;
 }
-.panner__banner__heading a:hover{
-   background-color: rgba(255, 255, 255, 0.301);
-   transition: 640ms;
-}
-
-/*WELCOME CLUB*/
-.welcome__club{
-    padding:60px;
-}
-.welcome__club__heading h2{
+.club__txt{
     text-align: center;
 }
-.welcome__club__heading p{
-    text-align: center;
-    margin-bottom: 40px;
-}
-.welcome__club__heading h3{
-    text-align: center;
-     margin-bottom: 20px;
-}
-.welcome__club__images{
+.club__cards{
     display:flex;
-    justify-content: space-between;
-    padding: 0 80px;    
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 20px;
 }
-.welcome__club__image{
-    width:32%;
+.club__card{
+    flex-basis:300px;
+    margin-bottom: 30px;
 }
-.welcome__club__image p{
+.club__img{
+    width:100%;
+    height:calc(100% - 20px);
+}
+.cards__heading{
     text-align: center;
-    font-weight: bold;    
+    margin:10px 0 0;
 }
-.welcome__club__image img{
-    height:500px;
-    width:100%;
-    box-shadow: 2px 2px 2px #808080;
+.card__descriptio{
+    padding:8px 0;
 }
-.welcome__club__image img:hover{
-    height:500px;
-    width:100%;
-     box-shadow: 0 0 7px #fff, 
-     0 0 4px #fff,
-     0 0 5px #fff, 
-     0 0 6px var(--colorblack),
-    0 0 7px var(--colorblack), 
-    0 0 8px var(--colorblack), 
-    0 0 9px var(--colorblack), 
-    0 0 29px var(--colorblack);
-    transition: 640ms;
-    transform: scale(0.9);
+.card__paragraph{
+    text-align: center;
+    font-weight: 700;
+}
+.club__card:hover .club__img{
+    animation: clubimganimado 1.2s ease;
 }
 
-/* SUBMAIN PETS */
-.main__pets{
-    background-color: var(--colorblack);
-    padding:20px;
+@keyframes clubimganimado{
+    0%{ transform:scale(1);}
+    50%{ transform:scale(1.03);}
+    100%{ transform:scale(1);}
 }
-.submain__pets{
+/*********************MAIN MASCOTAS*********************/
+.main__mascotas{
+    background-color: var(--colornegro);
+    color:var(--colorblanco);
+}
+.submain__mascotas{
+    max-width:1200px;
+    margin:0 auto;
+    padding:30px 0;
+}
+.mascotas__heading{
+    text-align: center;
+}
+.mascotas__subheading{
+    text-align: center;
+    margin-top: 5px;
+}
+.mascotas__cards{
+    margin-top: 50px;
     display:flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
-.submain__pet{
-    width:24%;
-    padding-top: 15px;
-}
-.main__pets__heading{
-    text-align: center;
-    padding:20px 0;
-    line-height: 40px;
-    font-size: 20px;
-    color:white;
-}
-.submain__pet:first-child > .submain__pet__image{
-    margin:0 auto 20px;
-    max-width:200px;
-    height:200px;
-    background-image: url("../img/mascota\ \(3\).jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top center;
-    border-radius: 50%;
-}
-.submain__pet:first-child > .submain__pet__image:hover{
-    transform: rotate(-30deg);
-    transition:ease 640ms;
-    cursor: pointer;
-    box-shadow: 0 0 7px #fff, 0 0 3px #fff, 0 0 4px #fff, 0 0 5px #808080,
-    0 0 6px #808080, 0 0 7px #808080, 0 0 8px #808080, 0 0 29px #808080;
-}
-.submain__pet:last-child > .submain__pet__image{
-    margin:0 auto 20px;
-    max-width:200px;
-    height:200px;
-    background-image: url("../img/mascota\ \(4\).jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top center;
-    border-radius: 50%;
-}
-.submain__pet:last-child > .submain__pet__image:hover{
-    transform: rotate(-30deg);
-    transition:ease 640ms;
-    cursor: pointer;
-    box-shadow: 0 0 7px #fff, 0 0 3px #fff, 0 0 4px #fff, 0 0 5px #808080,
-    0 0 6px #808080, 0 0 7px #808080, 0 0 8px #808080, 0 0 29px #808080;
-}
-.submain__pet:nth-child(2) > .submain__pet__image{
-    margin:0 auto 20px;
-    max-width:200px;
-    height:200px;
-    background-image: url("../img/mascota\ \(5\).jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top center;
-    border-radius: 50%;
-}
-.submain__pet:nth-child(2) > .submain__pet__image:hover{
-    transform: rotate(-30deg);
-    transition:ease 640ms;
-    cursor: pointer;
-    box-shadow: 0 0 7px #fff, 0 0 3px #fff, 0 0 4px #fff, 0 0 5px #808080,
-    0 0 6px #808080, 0 0 7px #808080, 0 0 8px #808080, 0 0 29px #808080;
-}
-.submain__pet:nth-child(3) > .submain__pet__image{
-    margin:0 auto 20px;
-    max-width:200px;
-    height:200px;
-    background-image: url("../img/mascota\ \(2\).jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top center;
-    border-radius: 50%;
-}
-.submain__pet:nth-child(3) > .submain__pet__image:hover{
-    transform: rotate(-30deg);
-    transition:ease 640ms;
-    cursor: pointer;
-    box-shadow: 0 0 7px #fff, 0 0 3px #fff, 0 0 4px #fff, 0 0 5px #808080,
-    0 0 6px #808080, 0 0 7px #808080, 0 0 8px #808080, 0 0 29px #808080;
-}
-.mini__pet__heading{
-    text-align: center;
-    color:white;
+.mascota__card{
+    flex-basis: 240px;
+    margin-bottom: 20px;
 }
 
-/* MAIN FOOTER */
-.submain__footer{
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
+.mascota__card:hover .mascota__img{    
+    animation: mascotamove 1.9s;
+}
+@keyframes mascotamove{
+    0%{transform:rotate(0);}
+    50%{
+        transform:rotate(40deg);
+        box-shadow:0 1px 2px #fff,
+                   0 2px 4px #e2dfdf,
+                   0 3px 6px #b4b0b0,
+                   0 4px 8px #fff,
+                   0 5px 10px #949494;
+    }
+    100%{transform:rotate(0);}
+}
+.mascota__img{    
     width:100%;
-    padding:30px 100px;
+    height:250px;
+    object-fit: cover;
+    border-radius: 50%;
 }
-.submain__footer__heading{
-    font-weight: 300;
-}
-.submain__footer__heading{
-    font-weight: 300;
-}
-.socialnetwork{
-    font-size:25px;
-    margin:0 20px;
-    color:var(--colorblack);
-}
-.socialnetwork:hover{
-    transition: 640ms;
-    transform: scale(0.9);
-    color:black;
-    cursor:pointer;
-}
-
- /* MEDIA QUERIES */
-
- @media screen and (max-width:1100px) {
-     .panner__banner__heading{  
-    left:30%;
-    transition:640ms;
-}
-.welcome__club__images{
-    padding: 0 20px;    
-}
-}
-
-@media screen and (max-width:850px){
-    .welcome__club__images{
-    flex-direction: column;
-    padding: 0;    
-}
-.welcome__club__image{
-    width:100%;
-}
-.welcome__club__image img{
-   display:block;
-    margin: 0 auto;
-    max-width:400px;
-}
-.welcome__club__image p{
+.mascota__name{
     margin-top: 10px;
-    margin-bottom: 20px;   
 }
-.submain__pets{
-   flex-direction: column;
-   align-items: center;
-}
-.submain__pet{
-    width:50%;
-}
-}
-@media screen and (max-width:768px){
-    .panner__banner__heading{  
-    left:40%;
-    transition:640ms;
-}
-}
-
-@media screen and (max-width:650px){
-.submain__footer{
-    flex-direction: column;   
-}
-.socialnetwork{    
-    margin:20px 20px 0;
-}
-}
-
-@media screen and (max-width:500px) {
-    .panner__banner__heading{  
-    left:50%;
-    transition:640ms;
-    width:100%;
+.mascota__mainname{
     text-align: center;
 }
-.submain__header{
-   flex-direction: column;
+/***********************FOOTER***********************/
+.main__footer{
+    padding:40px 0;
 }
-.navbar__menu__links{
-    padding:20px 0;
+.submain__footer{
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 8px;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.main__page__banner{
-  margin-top: 100px;
+.footer__navlink{
+    text-decoration: none;
+    font-size:28px;
+    padding:0 10px;
+    color:var(--colornegro);
 }
-.page__banner__img{
-  background-position: center center; 
+@media screen and (max-width:375px){
+    .submain__footer{
+  flex-direction: column;
 }
-.panner__banner__heading{  
-    top:50%;
+.footer__navbar{
+    margin-top: 20px;
 }
 }
